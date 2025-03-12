@@ -4,7 +4,7 @@ import os, warnings, pydantic
 
 
 def main ():
-    warnings.filterwarnings("ignore", category=pydantic.PydanticDeprecatedSince20)
+    
     os.environ.get('OPENAI_API_KEY')
     os.environ.get('SERPER_API_KEY')
 
@@ -25,6 +25,7 @@ def main ():
 
     job = Task(
         description=promptTask,
+        expected_output="What is a good summarization of Henry VIII",
         agent=search
     )
 
@@ -37,5 +38,5 @@ def main ():
 
     crew.kickoff()
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()
