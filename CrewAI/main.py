@@ -1,6 +1,6 @@
 from crewai import Agent, Task, Crew, Process, LLM
 from crewai_tools import SerperDevTool, WebsiteSearchTool
-import os, warnings, pydantic
+import os
 
 
 def main ():
