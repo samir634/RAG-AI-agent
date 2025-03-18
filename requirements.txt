@@ -2,4 +2,7 @@ crewai
 openai
 crewai[tools]
 openai-agents
-beautifulsoup4d
+beautifulsoup4
+faiss-cpu
+sentence-transformers
+numpy

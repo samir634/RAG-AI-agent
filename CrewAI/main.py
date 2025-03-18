@@ -13,7 +13,7 @@ def main ():
     modelType = LLM(model='gpt-4o', temperature=0.2)
 
     referenceDoc = WebsiteSearchTool(website='<https://en.wikipedia.org/wiki/Henry_VIII>')
-    promptTask = "Was Henry VIII a good person?"
+    promptTask = "Provide a concise summary of the kind of leader Henry VII was"
 
     search = Agent(
         role = "Researcher",
@@ -25,7 +25,7 @@ def main ():
 
     job = Task(
         description=promptTask,
-        expected_output="What is a good summarization of Henry VIII",
+        expected_output="No inclusion of the URL, concise summary of the kind of leader King Henry VIII was",
         agent=search
     )
 
